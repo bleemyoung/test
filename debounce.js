@@ -32,7 +32,7 @@ var debounce2 = function (fn, t) {
         }
         time = setTimeout(() => {
             flag = true
-        })
+        }, t)
     }
 };
 /**
@@ -50,7 +50,7 @@ log('Hello'); // cancelled
 log('Hello2');//不执行
 setTimeout(() => {
     log('Hello3');
-    log('Hello5');//不执行
+    log('Hello4');//不执行
 }, 1000)
 
 // https://blog.csdn.net/bu_xiang_tutou/article/details/133870551
