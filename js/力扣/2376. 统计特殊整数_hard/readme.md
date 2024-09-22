@@ -5,3 +5,6 @@ https://leetcode.cn/problems/count-special-integers/description/
 
 给你一个 正 整数 n ，请你返回区间 [1, n] 之间特殊整数的数目。
 
+## 解法
+
+[dp解法](https://leetcode.cn/problems/count-special-integers/solutions/1746956/shu-wei-dp-mo-ban-by-endlesscheng-xtgx/)
