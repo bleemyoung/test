@@ -8,4 +8,6 @@
   * [题目描述](./js/力扣/787.K站中转内最便宜的航班_medium/readme.md)
 * 22.括号生成_medium
 * 815.公交路线_har
-  * [1](./js/力扣/815.公交路线_hard/readme.md)
+  * [题目描述](./js/力扣/815.公交路线_hard/readme.md)
+* 15.三数之和_medium
+  * [题目描述](./js/力扣/15.三数之和_medium/readme.md)
