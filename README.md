@@ -11,3 +11,6 @@
   * [题目描述](./js/力扣/815.公交路线_hard/readme.md)
 * 15.三数之和_medium
   * [题目描述](./js/力扣/15.三数之和_medium/readme.md)
+* 134.加油站_medium
+  * [题目描述](./js/力扣/134.加油站_medium/readme.md)
+  * 贪心算法 [官方题解](https://leetcode.cn/problems/gas-station/solutions/488357/jia-you-zhan-by-leetcode-solution/)
