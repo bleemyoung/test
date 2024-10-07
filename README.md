@@ -14,3 +14,5 @@
 * 134.加油站_medium
   * [题目描述](./js/力扣/134.加油站_medium/readme.md)
   * 贪心算法 [官方题解](https://leetcode.cn/problems/gas-station/solutions/488357/jia-you-zhan-by-leetcode-solution/)
+*  1928.规定时间内到达终点的最小花费_hard
+  * [题目描述](./js/力扣/1928.规定时间内到达终点的最小花费_hard/readme.md)
