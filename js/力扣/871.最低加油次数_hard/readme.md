@@ -33,3 +33,31 @@ https://leetcode.cn/problems/minimum-number-of-refueling-stops/description/
 2. 到达第 2 个加油站时，可以加满汽油，然后继续前进 30 英里到达目的地。
 3. 到达第 3 个加油站时，可以加满汽油，然后继续前进 30 英里到达目的地。
 ```
+
+## 解题
+### 贪心算法
+
+### 动态规划
+见[动态规划解法](run.js)
+``` javascript
+var minRefuelStops = function (target, startFuel, stations) {
+    const n = stations.length;
+    const dp = new Array(n + 1).fill(0);
+    // dp[i] 表示到第 i 次加油能到达的最远距离
+    dp[0] = startFuel;
+    for (let i = 1; i <= n; i++) {
+        const [position, fuel] = stations[i - 1];
+        for (let j = i - 1; j >= 0; j--) {
+            if (dp[j] >= position) {
+                dp[j + 1] = Math.max(dp[j + 1], dp[j] + fuel);
+            }
+        }
+    }
+    for (let i = 0; i <= n; i++) {
+        if (dp[i] >= target) {
+            return i;
+        }
+    }
+    return -1;
+};
+```
