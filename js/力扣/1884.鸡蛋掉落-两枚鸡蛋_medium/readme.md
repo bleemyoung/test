@@ -1,4 +1,6 @@
 # 1884.鸡蛋掉落-两枚鸡蛋
+[拓展](../887.鸡蛋掉落_hard/readme.md)
+
 https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/description/
 ## 题目描述
 给你 2 枚相同 的鸡蛋，和一栋从第 1 层到第 n 层共有 n 层楼的建筑。
