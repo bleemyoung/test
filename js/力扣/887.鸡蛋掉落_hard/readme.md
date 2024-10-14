@@ -9,3 +9,29 @@ https://leetcode.cn/problems/super-egg-drop/description/
 
 请你计算并返回要确定 f 确切的值 的 最小操作次数 是多少？
 
+## 题解
+[超时，需要优化](./run.js)
+
+
+# 参考
+https://leetcode.cn/problems/super-egg-drop/solutions/380212/diu-ji-dan-wen-ti-zhong-zhi-ban-lai-xi-by-fe-lucif/
+
+https://www.cnblogs.com/grandyang/p/11048142.html
+
+``` javascript
+let superEggDrop = (K, N)=> {
+    let dp = Array(K+1).fill(0)
+    let cnt = 0
+    while (dp[K] < N){
+        cnt++
+        for (let i=K; i>0; i--){
+            dp[i] = dp[i-1] + dp[i] + 1
+        }
+    }
+    return cnt
+};
+// 作者：OFEII
+// 链接：https://leetcode.cn/problems/super-egg-drop/solutions/196936/chun-zhao-si-yue-ep11supereggdropji-dan-diao-luo-j/
+// 来源：力扣（LeetCode）
+// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
