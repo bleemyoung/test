@@ -15,8 +15,8 @@ var numberOfPermutations = function (n, requirements) {
         return 0;
     }
     let dp = new Array(n).fill(0).map(() => new Array(maxCount + 1).fill(-1));
-    console.log(reqMap);
-    console.log(dp);
+    // console.log(reqMap);
+    // console.log(dp);
     function dfs(end, count) {
         if (end === 0) {
             return 1;
@@ -26,6 +26,9 @@ var numberOfPermutations = function (n, requirements) {
         }
         if (reqMap.hasOwnProperty(end - 1)) {
             let r = reqMap[end - 1];
+            //  r 表示 end-1 的逆序数量
+            //  count-r 表示 前end-1个数与end形成的逆序数量
+            //  若0<=r<=count-r<=end，则满足条件，并记录。否则dfs值为0
             if (r <= count && count <= end + r) {
                 dp[end][count] = dfs(end - 1, r)
                 return dp[end][count];
@@ -45,3 +48,4 @@ var numberOfPermutations = function (n, requirements) {
 
 
 console.log(numberOfPermutations(3, [[2, 2], [0, 0]]));
+console.log(numberOfPermutations(3, [[2, 2], [1, 1], [0, 0]]));
