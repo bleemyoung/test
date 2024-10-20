@@ -11,35 +11,21 @@
 //     "$1********$2"
 // )
 // console.log(res);
-
 /**
- * @param {number} mainTank
- * @param {number} additionalTank
+ * @param {number[]} nums
  * @return {number}
  */
-var distanceTraveled = function (mainTank, additionalTank) {
-
-    if (mainTank < 5) {
-        return mainTank * 10
-    } else {
-        let res = 0
-        for (; mainTank >= 5 && additionalTank >= 1; mainTank -= 5) {
-            additionalTank--
-            mainTank++
-            res += 50
+var minOperations = function (nums) {
+    let n = nums.length
+    for (let i = 0; i < n - 2; i++) {
+        if (nums[i] == 0) {
+            for (let j = 0; j < 3; j++) {
+                nums[i+j]=nums[i+j]==1?0:1
+            }
         }
-        // while(mainTank >= 5){
-        //     mainTank -= 5
-        //     additionalTank--
-        //     mainTank++
-        //     res += 50
-        // }
-        // console.log(mainTank);
-        res += mainTank * 10
-        return res
     }
-
+    if (nums[n - 2] == 0 || nums[n - 1 == 0]) return false
+    return true
 };
-console.log(distanceTraveled(5, 10));
-// https://leetcode.cn/problems/total-distance-traveled/description/
+console.log(minOperations([[0, 1, 1, 1, 0, 0]]));
 
