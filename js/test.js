@@ -11,21 +11,40 @@
 //     "$1********$2"
 // )
 // console.log(res);
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var minOperations = function (nums) {
-    let n = nums.length
-    for (let i = 0; i < n - 2; i++) {
-        if (nums[i] == 0) {
-            for (let j = 0; j < 3; j++) {
-                nums[i+j]=nums[i+j]==1?0:1
-            }
-        }
+// var minOperations = function (nums) {
+//     let n = nums.length
+//     for (let i = 0; i < n - 2; i++) {
+//         if (nums[i] == 0) {
+//             for (let j = 0; j < 3; j++) {
+//                 nums[i+j]=nums[i+j]==1?0:1
+//             }
+//         }
+//     }
+//     if (nums[n - 2] == 0 || nums[n - 1 == 0]) return false
+//     return true
+// };
+// console.log(minOperations([[0, 1, 1, 1, 0, 0]]));
+var minChanges = function (n, k) {
+    let ans = 0
+    if (n != (n | k)) {
+        return -1
     }
-    if (nums[n - 2] == 0 || nums[n - 1 == 0]) return false
-    return true
+    let count1 = 0
+    while (n > 0) {
+        if (n % 2 === 1) {
+            count1 += 1
+        }
+        n = Math.floor(n / 2)
+    }
+    let count2 = 0
+    while (k > 0) {
+        if (k % 2 === 1) {
+            count2 += 1
+        }
+        k = Math.floor(k / 2)
+    }
+    console.log(count1, count2);
+    return count1 - count2
 };
-console.log(minOperations([[0, 1, 1, 1, 0, 0]]));
+console.log(minChanges(13, 4));
 
