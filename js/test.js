@@ -1,26 +1,27 @@
 /**
  * @param {number} n
- * @param {string[]} commands
+ * @param {number[][]} pick
  * @return {number}
  */
-var finalPositionOfSnake = function (n, commands) {
-    let ans = 0
-    for (let command of commands) {
-        switch (command) {
-            case 'UP':
-                ans -= n
-                break;
-            case 'RIGHT':
-                ans++
-                break;
-            case 'DOWN':
-                ans += n
-                break;
-            case 'LEFT':
-                ans--
-                break;
+var winningPlayerCount = function (n, pick) {
+    let arr = new Array(n).fill(0).map(() => new Array(11).fill(0))
+    // console.log(arr)
+    for (let i = 0; i < pick.length; i++) {
+        let [row, col] = pick[i]
+        arr[row][col]++
+    }
+    // console.log(arr);
+    let count = 0
+    for (let i = 0; i < n; i++) {
+        let arr2 = arr[i]
+        for(let j = 0; j < 10; j++){
+            if(arr2[j] > i){
+                count++
+                break
+            }
         }
     }
-    return ans
+    return count
 };
-console.log(finalPositionOfSnake(2, ["RIGHT", "DOWN"]));
+
+console.log(winningPlayerCount(4, [[0, 0], [1, 0], [1, 0], [2, 1], [2, 1], [2, 0]]))
