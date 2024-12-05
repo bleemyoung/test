@@ -24,3 +24,5 @@
   * [题目描述](./js/力扣/684.冗余连接medium/readme.md)
 * 3181.执行操作可获得的最大总奖励 II_hard
   * 这题包不会的[题目描述](./js/力扣/3181.执行操作可获得的最大总奖励%20II_hard/readme.md)
+* 638.大礼包medium
+  * [复习](./js/力扣/638.大礼包medium/readme.md)

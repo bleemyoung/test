@@ -1,31 +1,27 @@
-// Array.prototype.duplicator = function () {
-//     let s = this.concat(this)
-//     return s
-// }
-// let t = [1, 2, 3, 4, 5].duplicator()
-// console.log(t)
-
-// let str = "310110198211203711"
-// let res = str.replace(
-//     /(.{6}).*(.{4})/,
-//     "$1********$2"
-// )
-// console.log(res);
 /**
- * @param {number[]} nums
+ * @param {number} n
+ * @param {number[][]} pick
  * @return {number}
  */
-var minOperations = function (nums) {
-    let n = nums.length
-    for (let i = 0; i < n - 2; i++) {
-        if (nums[i] == 0) {
-            for (let j = 0; j < 3; j++) {
-                nums[i+j]=nums[i+j]==1?0:1
+var winningPlayerCount = function (n, pick) {
+    let arr = new Array(n).fill(0).map(() => new Array(11).fill(0))
+    // console.log(arr)
+    for (let i = 0; i < pick.length; i++) {
+        let [row, col] = pick[i]
+        arr[row][col]++
+    }
+    // console.log(arr);
+    let count = 0
+    for (let i = 0; i < n; i++) {
+        let arr2 = arr[i]
+        for(let j = 0; j < 10; j++){
+            if(arr2[j] > i){
+                count++
+                break
             }
         }
     }
-    if (nums[n - 2] == 0 || nums[n - 1 == 0]) return false
-    return true
+    return count
 };
-console.log(minOperations([[0, 1, 1, 1, 0, 0]]));
 
+console.log(winningPlayerCount(4, [[0, 0], [1, 0], [1, 0], [2, 1], [2, 1], [2, 0]]))
