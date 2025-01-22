@@ -1,58 +1,19 @@
-// /**
-//  * @param {string} coordinate1
-//  * @param {string} coordinate2
-//  * @return {boolean}
-//  */
-// var checkTwoChessboards = function (coordinate1, coordinate2) {
-//     return (coordinate1[0].charCodeAt(0) - coordinate2[0].charCodeAt(0) - coordinate1[1] - coordinate2[1]) % 2 === 0
-// };
-// // 3274. 检查棋盘方格颜色是否相同
-// console.log(checkTwoChessboards("a1", "c3"));//true
-var numRookCaptures = function (board) {
-    function findRook() {
-        for (let i = 0; i < 8; i++) {
-            for (let j = 0; j < 8; j++) {
-                if (board[i][j] === 'R') {
-                    return [i, j];
-                }
-            }
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findClosestNumber = function (nums) {
+    nums = nums.sort((a, b) => a - b)
+    let res = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        if (Math.abs(nums[i]) <= Math.abs(res)) {
+            res = nums[i];
+        }
+        if (nums[i] > 0){
+            return res;
         }
     }
-    let rook = findRook();
-    let count = 0;
-    for (let i = rook[0] - 1; i >= 0; i--) {
-        if (board[i][rook[1]] === 'p') {
-            count++;
-            break;
-        } else if (board[i][rook[1]] === 'B') {
-            break;
-        }
-    }
-    for (let i = rook[0] + 1; i < 8; i++) {
-        if (board[i][rook[1]] === 'p') {
-            count++;
-            break;
-        } else if (board[i][rook[1]] === 'B') {
-            break;
-        }
-    }
-    for (let i = rook[1] - 1; i >= 0; i--) {
-        if (board[rook[0]][i] === 'p') {
-            count++;
-            break;
-        } else if (board[rook[0]][i] === 'B') {
-            break;
-        }
-    }
-    for (let i = rook[1] + 1; i < 8; i++) {
-        if (board[rook[0]][i] === 'p') {
-            count++;
-            break;
-        } else if (board[rook[0]][i] === 'B') {
-            break;
-        }
-    }
-    return count;
+    return res;
 };
-let info = [[".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", "p", ".", ".", ".", "."], [".", ".", ".", "R", ".", ".", ".", "p"], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", "p", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."]]
-console.log(numRookCaptures(info));
+
+console.log(findClosestNumber([-4, -2, 1, 4, 8]));
