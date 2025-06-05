@@ -1,0 +1,103 @@
+<!DOCTYPE html
+    PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' />
+    <title>授权委托书</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            margin: 0;
+            font-family: SimSun;
+            padding: .75cm 1cm
+        }
+
+        #contract-wrapper {
+            margin: 0 auto;
+            width: 21cm;
+            border: 0 #d3d3d3 solid;
+            border-radius: 5px;
+            background: #fff;
+            line-height: 40px;
+            font-size: 20px
+        }
+
+        .trade-content {
+            text-indent: 2em;
+            font-size: 20px
+        }
+
+        #contract-title {
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: '黑体';
+            font-size: 30px
+        }
+
+        .picturesWrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+            /* border: 1px solid #d3d3d3; */
+
+            img {
+                width: 45%;
+                min-height: 390px;
+                border: 1px solid rgb(115, 156, 195);
+            }
+
+            .txt {
+                width: 50%;
+                padding: 0 20px;
+                /* text-indent: 2em; */
+            }
+        }
+
+        .footerInfo {
+            font-weight: bold;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contract-wrapper">
+        <h2 id="contract-title">授权委托书</h2>
+        <div class="trade-infos">
+            <div class="trade-content">
+                <p>
+                    本单位现正式授权 ${name}
+                    先生/女士,身份证号码:${idCard}，手机号：${phone}(新注册必须与注册的手机号一致/变更请填写新管理员手机号)，代表本单位全权处理本单位与欧冶链金智慧交易服务平台的所有业务操作。
+                </p>
+                <p>
+                    本单位承诺：填写的有关内容,提供的有关资料真实有效。受托人做出的一切上述业务平台的操作,都是本单位意愿之体现,均视为本单位的行为,由本单位对此负全部责任,无任何异议。
+                </p>
+            </div>
+            <div class="picturesWrapper" style="padding: 0.4cm .7cm;">
+                <!-- <img src="https://ts1.tc.mm.bing.net/th/id/R-C.1451901451d121ef1054f3c6d482c04e?rik=xzz%2fQno9VZZbGw&riu=http%3a%2f%2fimg.mp.itc.cn%2fupload%2f20170417%2f697ae75f9a464a41b9b9a8e23c214f37_th.jpg&ehk=Cj%2fFN4gRj3lLUqWuPzfCE%2fW1mvLbpTMRe2k6Edmv%2f5s%3d&risl=&pid=ImgRaw&r=0"> -->
+                <img src="data:image/png;base64,$!{idCardFaceBase64}">
+                <img src="data:image/png;base64,$!{idCardEmblemBase64}">
+            </div>
+            <div class="picturesWrapper" style="font-size: 20px; margin-top: 0.3cm;">
+                <div class="txt">委托单位：（实物章）</div>
+                <div class="txt" style="text-align: right;">法定代表人：（签字或盖章）</div>
+            </div>
+            <div style="text-align: right; margin-top: 4px;margin-right: 40px;">申请日期：${time}</div>
+            <div>
+                <p> 1、以上内容均为必填，请完整填写并签字盖章。务必加盖实体公章，印章文字需清晰可见，电子化印章图形无效将作驳回处理。</p>
+                <p>2、授权委托书申请日期的有效期为15天，请在15天内完成平台上的申请。</p>
+            </div>
+            <div class="footerInfo">欧冶链金平台客服热线：0555-3892815</div>
+        </div>
+    </div>
+</body>
+
+</html>
