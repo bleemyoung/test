@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <style>
+
+      html,
+      body {
+        padding: 0;
+        font-family: SimSun;
+        font-weight: normal;
+        font-size: medium;
+      }
+
+      .headline {
+        font-weight: bold;
+        font-size: xx-large;
+        text-align: center;
+        margin-top: 0;
+        /*font-family: LiSu;*/
+      }
+
+      .paragraph {
+        line-height: 25px;
+        text-indent: 2em;
+        margin: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .auto-info {
+        padding-left: 5px;
+        padding-right: 5px;
+        /* text-decoration: underline; */
+        border-bottom: 1px solid black;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: -6px;
+        text-indent: 0;
+        display: inline-block;
+        min-width: 50px;
+      }
+
+      .auto-id {
+        min-width: 140px;
+      }
+
+      .img-area {
+        margin: 0;
+        height: 220px;
+        border: 1px solid black;
+      }
+
+      .id-card-head {
+        height: 200px;
+        width: 40%;
+        float: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5%;
+      }
+
+      .id-card-emblem {
+        height: 200px;
+        width: 40%;
+        float: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 5%;
+      }
+
+      .manually-info {
+        text-align: right;
+        padding-right: 240px;
+      }
+
+      .expiration-tips {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .tips {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .ouyeel-contact {
+        margin: 0;
+        line-height: 1.5em;
+        word-wrap: break-word;
+        word-break: break-all;
+        font-weight: bold;
+        padding: 0px 50px;
+      }
+
+      .authorized-attorney {
+        /*width: 800px;*/
+        padding: 10px 20px 0 20px;
+        margin: 0 auto;
+        /*font-family: fangsong;*/
+        box-sizing: border-box;
+      }
+      .ml30 {
+        margin-left: 30px;
+      }
+      .ml80 {
+        margin-left: 80px;
+      }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body>
+    <div class="authorized-attorney">
+      <p class="headline">授权委托书</p>
+      <p class="paragraph">本单位现正式授权<span class="auto-info">$!{realName}</span>先生/女士，身份证号码:<span class="auto-info auto-id">$!{idCardNum}</span>，代表本单位全权处理本单位与欧冶各相关公司、宝武集团及东方付通信息技术有限公司的所有业务操作。</p>
+      <p class="paragraph">本单位承诺：填写的有关内容，提供的有关资料真实有效。受托人做出的一切上述业务平台的操作，都是本单位意愿之体现，均视为本单位的行为，由本单位对此负全部责任，无任何异议。</p>
+      <div class="img-area">
+        <img class="id-card-head" src="data:image/png;base64,$!{idCardHeadBase64}" />
+        <img class="id-card-emblem" src="data:image/png;base64,$!{idCardEmblemBase64}" />
+      </div>
+      <br /><br />
+      <p class="manually-info">委托单位（盖公章）：</p>
+      <br /><br />
+      <p class="manually-info">法定代表人或有权签字人（签字或签章）：</p>
+      <br /><br />
+      <p class="manually-info">申请日期：${applyDate}</p>
+      <p class="expiration-tips">（授权委托书申请日期的有效期为十五天，请在十五天内完成系统上的申请）</p>
+      <p class="tips">以上内容均为必填，请完整填写并签字盖章</p>
+      <p style="text-indent: 4em">注：是否需要重置密码 <span class="ml30">□是</span> <span class="ml80"> □否</span></p>
+      <p class="ouyeel-contact">欧冶业务客服热线：021-96169；宝武销售业务客服热线:4008208590；客服邮箱：baoservice@baosteel.com</p>
+    </div>
+  </body>
+</html>

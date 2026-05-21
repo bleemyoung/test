@@ -1,0 +1,476 @@
+{
+    "type": "object",
+    "properties": {
+        "pkId": {
+            "type": "integer",
+            "description": "自增序列"
+        },
+        "auctionId": {
+            "type": "string",
+            "description": "竞拍场次id"
+        },
+        "auctionNo": {
+            "type": "string",
+            "description": "竞拍场次号"
+        },
+        "auctionTitle": {
+            "type": "string",
+            "description": "竞拍场次名称"
+        },
+        "status": {
+            "type": "string",
+            "description": "状态"
+        },
+        "memberId": {
+            "type": "string",
+            "description": "会员ID"
+        },
+        "memberName": {
+            "type": "string",
+            "description": "会员名称"
+        },
+        "auctionType": {
+            "type": "string",
+            "description": "竞拍方式"
+        },
+        "deliveryMethod": {
+            "type": "string",
+            "description": "提货方式"
+        },
+        "invoicePercent": {
+            "type": "number",
+            "description": "税率"
+        },
+        "startPrice": {
+            "type": "number",
+            "description": "起拍价"
+        },
+        "wgt": {
+            "type": "number",
+            "description": "重量"
+        },
+        "unit": {
+            "type": "string",
+            "description": "计量单位"
+        },
+        "materialNo": {
+            "type": "string",
+            "description": "物料代码"
+        },
+        "materialName": {
+            "type": "string",
+            "description": "物料名称"
+        },
+        "materialDesc": {
+            "type": "string",
+            "description": "物料描述"
+        },
+        "specs": {
+            "type": "string",
+            "description": "规格"
+        },
+        "applicationEndTime": {
+            "type": "string",
+            "description": "报名截止时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "quotationEndTime": {
+            "type": "string",
+            "description": "报价结束时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "delayedTime": {
+            "type": "integer",
+            "description": "场次延长时间(分钟为最小单位)"
+        },
+        "startTime": {
+            "type": "string",
+            "description": "竞拍开始时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "endTime": {
+            "type": "string",
+            "description": "竞拍结束时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "scheduledEndTime": {
+            "type": "string",
+            "description": "预定竞拍结束时间(未延时前的设定结束时间)",
+            "x-apifox-mock": "@datetime"
+        },
+        "expireTime": {
+            "type": "integer",
+            "description": "场次失效时间(小时为最小单位)"
+        },
+        "auctionObject": {
+            "type": "string",
+            "description": "竞拍对象(0全部 1企业 2个人)"
+        },
+        "isDirection": {
+            "type": "string",
+            "description": "是否定向"
+        },
+        "bidMethod": {
+            "type": "string",
+            "description": "报价方式(1按单价 2按总价)"
+        },
+        "connectName": {
+            "type": "string",
+            "description": "联系人"
+        },
+        "connectPhone": {
+            "type": "string",
+            "description": "联系方式"
+        },
+        "address": {
+            "type": "string",
+            "description": "货源地"
+        },
+        "inspectionStartTime": {
+            "type": "string",
+            "description": "验货开始时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "inspectionEndTime": {
+            "type": "string",
+            "description": "验货结束时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "inspectionDesc": {
+            "type": "string",
+            "description": "验货说明"
+        },
+        "auctionDesc": {
+            "type": "string",
+            "description": "竞价说明"
+        },
+        "remark": {
+            "type": "string",
+            "description": "备注"
+        },
+        "auditorId": {
+            "type": "string",
+            "description": "审核人Id"
+        },
+        "auditorName": {
+            "type": "string",
+            "description": "审核人姓名"
+        },
+        "auditDate": {
+            "type": "string",
+            "description": "审核时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "auditResult": {
+            "type": "string",
+            "description": "审核结果"
+        },
+        "auditOpinion": {
+            "type": "string",
+            "description": "审核意见"
+        },
+        "publishTime": {
+            "type": "string",
+            "description": "发布时间(公告时间)",
+            "x-apifox-mock": "@datetime"
+        },
+        "auctionResult": {
+            "type": "string",
+            "description": "竞拍结果"
+        },
+        "auctionResultDate": {
+            "type": "string",
+            "description": "竞拍结果时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "bidderMemberId": {
+            "type": "string",
+            "description": "中标会员id"
+        },
+        "bidderMemberName": {
+            "type": "string",
+            "description": "中标会员名称"
+        },
+        "bidderPrice": {
+            "type": "number",
+            "description": "中标价"
+        },
+        "contractId": {
+            "type": "string",
+            "description": "合同id"
+        },
+        "contractNo": {
+            "type": "string",
+            "description": "合同号"
+        },
+        "remindFlag": {
+            "type": "string",
+            "description": "失效提醒标记（1、已提醒）"
+        },
+        "minApplicationCount": {
+            "type": "integer",
+            "description": "报名人数(最小)"
+        },
+        "onlyBidderWin": {
+            "type": "string",
+            "description": "是否允许唯一出价者中标(1是，0否)"
+        },
+        "stopFlag": {
+            "type": "string",
+            "description": "终止标记"
+        },
+        "stopUser": {
+            "type": "string",
+            "description": "终止人Id"
+        },
+        "stopName": {
+            "type": "string",
+            "description": "终止人姓名"
+        },
+        "stopDate": {
+            "type": "string",
+            "description": "终止时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "stopDesc": {
+            "type": "string",
+            "description": "终止原因说明"
+        },
+        "extend1": {
+            "type": "string",
+            "description": "扩展字段1"
+        },
+        "extend2": {
+            "type": "string",
+            "description": "扩展字段2"
+        },
+        "extend3": {
+            "type": "string",
+            "description": "扩展字段3"
+        },
+        "extend4": {
+            "type": "string",
+            "description": "扩展字段4"
+        },
+        "extend5": {
+            "type": "string",
+            "description": "扩展字段5"
+        },
+        "markUpGradFlag": {
+            "type": "string",
+            "description": "梯度加价标记(1是 0否)"
+        },
+        "markUpGrad": {
+            "type": "number",
+            "description": "加价梯度"
+        },
+        "publicQuotation": {
+            "type": "string",
+            "description": "是否公开报价(1公开 0不公开)"
+        },
+        "multipleQuotation": {
+            "type": "string",
+            "description": "是否允许多次报价(1是0否)"
+        },
+        "sameQuotationRule": {
+            "type": "string",
+            "description": "报价相同设置(1优先报价单位中标 2场次流标)"
+        },
+        "earnestModel": {
+            "type": "string",
+            "description": "保证金模式（1买方缴纳 2双方缴纳 3免买家保证金）"
+        },
+        "buyerEarnest": {
+            "type": "number",
+            "description": "买家保证金"
+        },
+        "sellerEarnest": {
+            "type": "number",
+            "description": "卖家保证金"
+        },
+        "bookId": {
+            "type": "string",
+            "description": "账套"
+        },
+        "aliveFlag": {
+            "type": "string",
+            "description": "当前有效状态"
+        },
+        "createUser": {
+            "type": "string",
+            "description": "创建者"
+        },
+        "createName": {
+            "type": "string",
+            "description": "创建者姓名"
+        },
+        "createDate": {
+            "type": "string",
+            "description": "创建时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "updateUser": {
+            "type": "string",
+            "description": "修改者"
+        },
+        "updateName": {
+            "type": "string",
+            "description": "修改者姓名"
+        },
+        "updateDate": {
+            "type": "string",
+            "description": "修改时间",
+            "x-apifox-mock": "@datetime"
+        },
+        "version": {
+            "type": "integer",
+            "description": "版本号"
+        },
+        "browseCount": {
+            "type": "integer",
+            "description": "浏览次数"
+        },
+        "files": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/159933508",
+                "description": "com.ry.server.basic.commons.defaults.persistence.entities.Attachment"
+            },
+            "description": "竞价单附件"
+        },
+        "dirctionList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/167402391",
+                "description": "com.ry.server.basic.commons.defaults.persistence.entities.PurchaseDemandDirction"
+            },
+            "description": "定向子项"
+        },
+        "itemList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/167402393",
+                "description": ""
+            },
+            "description": "物料子项"
+        },
+        "client": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/167402394",
+                "description": "com.ry.server.basic.commons.defaults.persistence.entities.AuctionApplication"
+            },
+            "description": "报名客户"
+        },
+        "passClient": {
+            "type": "integer",
+            "description": "审批通过客户数量"
+        },
+        "bidMemberTotal": {
+            "type": "integer",
+            "description": "出价会员数量"
+        },
+        "stopFile": {
+            "$ref": "#/definitions/159933508",
+            "description": "终止附件"
+        },
+        "showMaterialName": {
+            "type": "string",
+            "description": "物料名称"
+        },
+        "showMaterialDesc": {
+            "type": "string",
+            "description": "物料描述"
+        }
+    },
+    "x-apifox-orders": [
+        "pkId",
+        "auctionId",
+        "auctionNo",
+        "auctionTitle",
+        "status",
+        "memberId",
+        "memberName",
+        "auctionType",
+        "deliveryMethod",
+        "invoicePercent",
+        "startPrice",
+        "wgt",
+        "unit",
+        "materialNo",
+        "materialName",
+        "materialDesc",
+        "specs",
+        "applicationEndTime",
+        "quotationEndTime",
+        "delayedTime",
+        "startTime",
+        "endTime",
+        "scheduledEndTime",
+        "expireTime",
+        "auctionObject",
+        "isDirection",
+        "bidMethod",
+        "connectName",
+        "connectPhone",
+        "address",
+        "inspectionStartTime",
+        "inspectionEndTime",
+        "inspectionDesc",
+        "auctionDesc",
+        "remark",
+        "auditorId",
+        "auditorName",
+        "auditDate",
+        "auditResult",
+        "auditOpinion",
+        "publishTime",
+        "auctionResult",
+        "auctionResultDate",
+        "bidderMemberId",
+        "bidderMemberName",
+        "bidderPrice",
+        "contractId",
+        "contractNo",
+        "remindFlag",
+        "minApplicationCount",
+        "onlyBidderWin",
+        "stopFlag",
+        "stopUser",
+        "stopName",
+        "stopDate",
+        "stopDesc",
+        "extend1",
+        "extend2",
+        "extend3",
+        "extend4",
+        "extend5",
+        "markUpGradFlag",
+        "markUpGrad",
+        "publicQuotation",
+        "multipleQuotation",
+        "sameQuotationRule",
+        "earnestModel",
+        "buyerEarnest",
+        "sellerEarnest",
+        "bookId",
+        "aliveFlag",
+        "createUser",
+        "createName",
+        "createDate",
+        "updateUser",
+        "updateName",
+        "updateDate",
+        "version",
+        "browseCount",
+        "files",
+        "dirctionList",
+        "itemList",
+        "client",
+        "passClient",
+        "bidMemberTotal",
+        "stopFile",
+        "showMaterialName",
+        "showMaterialDesc"
+    ]
+}
